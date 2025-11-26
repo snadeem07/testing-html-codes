@@ -238,33 +238,29 @@
 
 
 
-                    <!-- Top Row: Label & Bank Selector -->
+                    <!-- Top Row: Balance Only -->
 
-                    <div class="flex justify-between items-start relative z-10">
+                    <div class="relative z-10">
 
-                        <div>
+                        <p class="text-green-100 text-sm font-medium mb-1">Available Balance</p>
 
-                            <p class="text-green-100 text-sm font-medium mb-1">Available Balance</p>
+                        <h2 id="balance-display" class="text-5xl font-bold tracking-tight animate-fade-up">$54,100.00</h2>
 
-                            <h2 id="balance-display" class="text-5xl font-bold tracking-tight animate-fade-up">$54,100.00</h2>
-
-                        </div>
+                    </div>
 
 
 
-                        <!-- Bank Selector -->
+                    <!-- Bottom Row: Bank Selector Buttons -->
 
-                        <div class="flex flex-col gap-2 items-end">
+                    <div class="flex gap-2 items-center justify-center relative z-10">
 
-                            <button onclick="switchBank('ADCB')" class="bank-selector-item text-[10px] px-2 py-1 rounded-md border border-white/30 text-white hover:bg-white/20">ADCB</button>
+                        <button onclick="switchBank('ADCB')" class="bank-selector-item text-[10px] px-3 py-1.5 rounded-md border border-white/30 text-white hover:bg-white/20">ADCB</button>
 
-                            <button onclick="switchBank('RAK')" class="bank-selector-item text-[10px] px-2 py-1 rounded-md border border-white/30 text-white hover:bg-white/20">RAK</button>
+                        <button onclick="switchBank('RAK')" class="bank-selector-item text-[10px] px-3 py-1.5 rounded-md border border-white/30 text-white hover:bg-white/20">RAK</button>
 
-                            <button onclick="switchBank('MASHREQ')" class="bank-selector-item text-[10px] px-2 py-1 rounded-md border border-white/30 text-white hover:bg-white/20">MASHREQ</button>
+                        <button onclick="switchBank('MASHREQ')" class="bank-selector-item text-[10px] px-3 py-1.5 rounded-md border border-white/30 text-white hover:bg-white/20">MASHREQ</button>
 
-                            <button onclick="switchBank('ADIB')" class="bank-selector-item active text-[10px] px-2 py-1 rounded-md border border-white/30 text-emerald-900 bg-white">ADIB</button>
-
-                        </div>
+                        <button onclick="switchBank('ADIB')" class="bank-selector-item active text-[10px] px-3 py-1.5 rounded-md border border-white/30 text-emerald-900 bg-white">ADIB</button>
 
                     </div>
 
@@ -314,11 +310,13 @@
 
                     <!-- Date Section -->
 
-                    <div class="flex flex-col items-center mr-4 min-w-[60px]">
+                    <div class="flex flex-col items-center mr-4 min-w-[70px]">
 
-                        <div class="text-3xl font-bold text-gray-900">15</div>
+                        <div class="text-3xl font-bold text-gray-900 leading-none">29</div>
 
-                        <div class="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-0.5 rounded mt-1">Wed</div>
+                        <div class="text-xs font-bold text-red-500 border-2 border-red-500 px-2 py-0.5 rounded mt-1.5 uppercase">Wed</div>
+
+                        <div class="text-[9px] text-gray-400 mt-1">07/2025</div>
 
                     </div>
 
@@ -326,11 +324,15 @@
 
                     <div class="flex-1">
 
-                        <h4 class="font-bold text-gray-900 text-base">Amazon</h4>
+                        <h4 class="font-bold text-gray-900 text-base uppercase tracking-tight">AMAZON</h4>
 
-                        <p class="text-xs text-gray-500 mt-0.5">Debit Card • ADCB</p>
+                        <div class="flex items-center gap-1.5 mt-0.5">
 
-                        <span class="transaction-tag bg-orange-100 text-orange-700">Online Shopping</span>
+                            <span class="text-[10px] font-bold text-red-500 uppercase">ONLINE SHOPPING</span>
+
+                            <span class="text-[10px] text-gray-400">• ADCB 2105</span>
+
+                        </div>
 
                     </div>
 
@@ -338,9 +340,7 @@
 
                     <div class="text-right">
 
-                        <p class="font-bold text-red-500 text-base">-$200.00</p>
-
-                        <p class="text-xs text-gray-400 mt-0.5">03/2025</p>
+                        <p class="font-bold text-gray-900 text-lg">-$200.00</p>
 
                     </div>
 
@@ -354,11 +354,13 @@
 
                     <!-- Date Section -->
 
-                    <div class="flex flex-col items-center mr-4 min-w-[60px]">
+                    <div class="flex flex-col items-center mr-4 min-w-[70px]">
 
-                        <div class="text-3xl font-bold text-gray-900">03</div>
+                        <div class="text-3xl font-bold text-gray-900 leading-none">03</div>
 
-                        <div class="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-0.5 rounded mt-1">Wed</div>
+                        <div class="text-xs font-bold text-red-500 border-2 border-red-500 px-2 py-0.5 rounded mt-1.5 uppercase">Wed</div>
+
+                        <div class="text-[9px] text-gray-400 mt-1">09/2025</div>
 
                     </div>
 
@@ -366,11 +368,15 @@
 
                     <div class="flex-1">
 
-                        <h4 class="font-bold text-gray-900 text-base">Lulu Hypermarket</h4>
+                        <h4 class="font-bold text-gray-900 text-base uppercase tracking-tight">LULU MARKET</h4>
 
-                        <p class="text-xs text-gray-500 mt-0.5">Bank Transfer • RAK</p>
+                        <div class="flex items-center gap-1.5 mt-0.5">
 
-                        <span class="transaction-tag bg-green-100 text-green-700">Groceries</span>
+                            <span class="text-[10px] font-bold text-green-600 uppercase">GROCERIES</span>
+
+                            <span class="text-[10px] text-gray-400">• RAK</span>
+
+                        </div>
 
                     </div>
 
@@ -378,9 +384,7 @@
 
                     <div class="text-right">
 
-                        <p class="font-bold text-red-500 text-base">-$1,000.00</p>
-
-                        <p class="text-xs text-gray-400 mt-0.5">09/2025</p>
+                        <p class="font-bold text-gray-900 text-lg">-$1,000.00</p>
 
                     </div>
 
@@ -394,11 +398,13 @@
 
                     <!-- Date Section -->
 
-                    <div class="flex flex-col items-center mr-4 min-w-[60px]">
+                    <div class="flex flex-col items-center mr-4 min-w-[70px]">
 
-                        <div class="text-3xl font-bold text-gray-900">03</div>
+                        <div class="text-3xl font-bold text-gray-900 leading-none">03</div>
 
-                        <div class="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-0.5 rounded mt-1">Fri</div>
+                        <div class="text-xs font-bold text-red-500 border-2 border-red-500 px-2 py-0.5 rounded mt-1.5 uppercase">Fri</div>
+
+                        <div class="text-[9px] text-gray-400 mt-1">05/2024</div>
 
                     </div>
 
@@ -406,11 +412,15 @@
 
                     <div class="flex-1">
 
-                        <h4 class="font-bold text-gray-900 text-base">Apple Inc.</h4>
+                        <h4 class="font-bold text-gray-900 text-base uppercase tracking-tight">APPLE INC.</h4>
 
-                        <p class="text-xs text-gray-500 mt-0.5">Salary Deposit • ADCB</p>
+                        <div class="flex items-center gap-1.5 mt-0.5">
 
-                        <span class="transaction-tag bg-blue-100 text-blue-700">Income</span>
+                            <span class="text-[10px] font-bold text-blue-600 uppercase">INCOME</span>
+
+                            <span class="text-[10px] text-gray-400">• ADCB</span>
+
+                        </div>
 
                     </div>
 
@@ -418,9 +428,7 @@
 
                     <div class="text-right">
 
-                        <p class="font-bold text-green-500 text-base">+$1,900.00</p>
-
-                        <p class="text-xs text-gray-400 mt-0.5">05/2024</p>
+                        <p class="font-bold text-green-600 text-lg">+$1,900.00</p>
 
                     </div>
 
@@ -434,11 +442,13 @@
 
                     <!-- Date Section -->
 
-                    <div class="flex flex-col items-center mr-4 min-w-[60px]">
+                    <div class="flex flex-col items-center mr-4 min-w-[70px]">
 
-                        <div class="text-3xl font-bold text-gray-900">01</div>
+                        <div class="text-3xl font-bold text-gray-900 leading-none">01</div>
 
-                        <div class="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-0.5 rounded mt-1">Sat</div>
+                        <div class="text-xs font-bold text-red-500 border-2 border-red-500 px-2 py-0.5 rounded mt-1.5 uppercase">Sat</div>
+
+                        <div class="text-[9px] text-gray-400 mt-1">03/2025</div>
 
                     </div>
 
@@ -446,11 +456,15 @@
 
                     <div class="flex-1">
 
-                        <h4 class="font-bold text-gray-900 text-base">Electric Company</h4>
+                        <h4 class="font-bold text-gray-900 text-base uppercase tracking-tight">ELECTRIC CO.</h4>
 
-                        <p class="text-xs text-gray-500 mt-0.5">Utility Payment</p>
+                        <div class="flex items-center gap-1.5 mt-0.5">
 
-                        <span class="transaction-tag bg-yellow-100 text-yellow-700">Bills</span>
+                            <span class="text-[10px] font-bold text-yellow-600 uppercase">BILLS</span>
+
+                            <span class="text-[10px] text-gray-400">• UTILITY</span>
+
+                        </div>
 
                     </div>
 
@@ -458,9 +472,7 @@
 
                     <div class="text-right">
 
-                        <p class="font-bold text-red-500 text-base">-$125.50</p>
-
-                        <p class="text-xs text-gray-400 mt-0.5">03/2025</p>
+                        <p class="font-bold text-gray-900 text-lg">-$125.50</p>
 
                     </div>
 
@@ -474,11 +486,13 @@
 
                     <!-- Date Section -->
 
-                    <div class="flex flex-col items-center mr-4 min-w-[60px]">
+                    <div class="flex flex-col items-center mr-4 min-w-[70px]">
 
-                        <div class="text-3xl font-bold text-gray-900">29</div>
+                        <div class="text-3xl font-bold text-gray-900 leading-none">29</div>
 
-                        <div class="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-0.5 rounded mt-1">Wed</div>
+                        <div class="text-xs font-bold text-red-500 border-2 border-red-500 px-2 py-0.5 rounded mt-1.5 uppercase">Wed</div>
+
+                        <div class="text-[9px] text-gray-400 mt-1">07/2020</div>
 
                     </div>
 
@@ -486,11 +500,15 @@
 
                     <div class="flex-1">
 
-                        <h4 class="font-bold text-gray-900 text-base">Brunch with Daniel</h4>
+                        <h4 class="font-bold text-gray-900 text-base uppercase tracking-tight">BRUNCH DANIEL</h4>
 
-                        <p class="text-xs text-gray-500 mt-0.5">BBQ Debit Card</p>
+                        <div class="flex items-center gap-1.5 mt-0.5">
 
-                        <span class="transaction-tag bg-red-100 text-red-700">Food Life</span>
+                            <span class="text-[10px] font-bold text-pink-600 uppercase">FOOD LIFE</span>
+
+                            <span class="text-[10px] text-gray-400">• BBQ CARD</span>
+
+                        </div>
 
                     </div>
 
@@ -498,9 +516,7 @@
 
                     <div class="text-right">
 
-                        <p class="font-bold text-red-500 text-base">-$34.39</p>
-
-                        <p class="text-xs text-gray-400 mt-0.5">07/2020</p>
+                        <p class="font-bold text-gray-900 text-lg">-$34.39</p>
 
                     </div>
 
@@ -514,11 +530,13 @@
 
                     <!-- Date Section -->
 
-                    <div class="flex flex-col items-center mr-4 min-w-[60px]">
+                    <div class="flex flex-col items-center mr-4 min-w-[70px]">
 
-                        <div class="text-3xl font-bold text-gray-900">28</div>
+                        <div class="text-3xl font-bold text-gray-900 leading-none">28</div>
 
-                        <div class="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-0.5 rounded mt-1">Tue</div>
+                        <div class="text-xs font-bold text-red-500 border-2 border-red-500 px-2 py-0.5 rounded mt-1.5 uppercase">Tue</div>
+
+                        <div class="text-[9px] text-gray-400 mt-1">07/2020</div>
 
                     </div>
 
@@ -526,11 +544,15 @@
 
                     <div class="flex-1">
 
-                        <h4 class="font-bold text-gray-900 text-base">Ikea Wardrobe</h4>
+                        <h4 class="font-bold text-gray-900 text-base uppercase tracking-tight">IKEA WARDROBE</h4>
 
-                        <p class="text-xs text-gray-500 mt-0.5">BBQ Credit Card</p>
+                        <div class="flex items-center gap-1.5 mt-0.5">
 
-                        <span class="transaction-tag bg-indigo-100 text-indigo-700">Furniture</span>
+                            <span class="text-[10px] font-bold text-indigo-600 uppercase">FURNITURE</span>
+
+                            <span class="text-[10px] text-gray-400">• BBQ CREDIT</span>
+
+                        </div>
 
                     </div>
 
@@ -538,9 +560,7 @@
 
                     <div class="text-right">
 
-                        <p class="font-bold text-red-500 text-base">-$315.48</p>
-
-                        <p class="text-xs text-gray-400 mt-0.5">07/2020</p>
+                        <p class="font-bold text-gray-900 text-lg">-$315.48</p>
 
                     </div>
 
@@ -554,11 +574,13 @@
 
                     <!-- Date Section -->
 
-                    <div class="flex flex-col items-center mr-4 min-w-[60px]">
+                    <div class="flex flex-col items-center mr-4 min-w-[70px]">
 
-                        <div class="text-3xl font-bold text-gray-900">27</div>
+                        <div class="text-3xl font-bold text-gray-900 leading-none">27</div>
 
-                        <div class="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-0.5 rounded mt-1">Mon</div>
+                        <div class="text-xs font-bold text-red-500 border-2 border-red-500 px-2 py-0.5 rounded mt-1.5 uppercase">Mon</div>
+
+                        <div class="text-[9px] text-gray-400 mt-1">07/2020</div>
 
                     </div>
 
@@ -566,11 +588,15 @@
 
                     <div class="flex-1">
 
-                        <h4 class="font-bold text-gray-900 text-base">Minimum Fees</h4>
+                        <h4 class="font-bold text-gray-900 text-base uppercase tracking-tight">MINIMUM FEES</h4>
 
-                        <p class="text-xs text-gray-500 mt-0.5">HIBD → HIBD Travel</p>
+                        <div class="flex items-center gap-1.5 mt-0.5">
 
-                        <span class="transaction-tag bg-purple-100 text-purple-700">Transfer</span>
+                            <span class="text-[10px] font-bold text-purple-600 uppercase">TRANSFER</span>
+
+                            <span class="text-[10px] text-gray-400">• HIBD TRAVEL</span>
+
+                        </div>
 
                     </div>
 
@@ -578,9 +604,7 @@
 
                     <div class="text-right">
 
-                        <p class="font-bold text-gray-700 text-base">$80.00</p>
-
-                        <p class="text-xs text-gray-400 mt-0.5">07/2020</p>
+                        <p class="font-bold text-gray-700 text-lg">$80.00</p>
 
                     </div>
 
@@ -594,11 +618,13 @@
 
                     <!-- Date Section -->
 
-                    <div class="flex flex-col items-center mr-4 min-w-[60px]">
+                    <div class="flex flex-col items-center mr-4 min-w-[70px]">
 
-                        <div class="text-3xl font-bold text-gray-900">24</div>
+                        <div class="text-3xl font-bold text-gray-900 leading-none">24</div>
 
-                        <div class="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-0.5 rounded mt-1">Fri</div>
+                        <div class="text-xs font-bold text-red-500 border-2 border-red-500 px-2 py-0.5 rounded mt-1.5 uppercase">Fri</div>
+
+                        <div class="text-[9px] text-gray-400 mt-1">07/2020</div>
 
                     </div>
 
@@ -606,11 +632,15 @@
 
                     <div class="flex-1">
 
-                        <h4 class="font-bold text-gray-900 text-base">House Transfer</h4>
+                        <h4 class="font-bold text-gray-900 text-base uppercase tracking-tight">HOUSE TRANSFER</h4>
 
-                        <p class="text-xs text-gray-500 mt-0.5">HIBD → House</p>
+                        <div class="flex items-center gap-1.5 mt-0.5">
 
-                        <span class="transaction-tag bg-teal-100 text-teal-700">Transfer</span>
+                            <span class="text-[10px] font-bold text-teal-600 uppercase">TRANSFER</span>
+
+                            <span class="text-[10px] text-gray-400">• HIBD HOUSE</span>
+
+                        </div>
 
                     </div>
 
@@ -618,9 +648,7 @@
 
                     <div class="text-right">
 
-                        <p class="font-bold text-gray-700 text-base">$300.00</p>
-
-                        <p class="text-xs text-gray-400 mt-0.5">07/2020</p>
+                        <p class="font-bold text-gray-700 text-lg">$300.00</p>
 
                     </div>
 
