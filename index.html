@@ -190,28 +190,27 @@
 
 
 
-        <!-- Header -->
+        <!-- NEW HEADER SECTION -->
+        <header class="px-6 pt-8 pb-4 flex justify-between items-center bg-white z-10 lg:glass-effect lg:rounded-t-3xl">
+            <!-- Left: Edit Icon -->
+            <button class="p-2 -ml-2 hover:bg-gray-100 rounded-full transition-colors text-gray-900 group">
+                <div class="flex items-center justify-center w-8 h-8">
+                    <i class="fa-solid fa-pen-to-square text-xl text-gray-800 group-hover:text-black"></i>
+                </div>
+            </button>
 
-        <header class="px-6 pt-8 pb-4 flex justify-center items-center bg-white z-10 lg:glass-effect lg:rounded-t-3xl">
+            <!-- Center: Date Selector -->
+            <button class="flex items-center gap-2 px-3 py-1 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer">
+                <h2 class="text-xl font-bold tracking-tight text-gray-900">Nov 2025</h2>
+                <i class="fa-solid fa-chevron-down text-gray-400 text-sm mt-1"></i>
+            </button>
 
-            <div class="flex items-center gap-3 px-6 py-3 bg-gray-100 rounded-full">
-
-                <i class="fa-solid fa-pen-to-square text-gray-600"></i>
-
-                <span class="text-base font-semibold text-gray-900">Nov 2025</span>
-
-                <i class="fa-solid fa-chevron-down text-gray-600 text-sm"></i>
-
-                <div class="w-px h-5 bg-gray-300 mx-2"></div>
-
-                <button class="p-1 hover:bg-gray-200 rounded-full transition-colors">
-
-                    <i class="fa-solid fa-ellipsis text-gray-600"></i>
-
-                </button>
-
-            </div>
-
+            <!-- Right: Menu Icon (Circle Dots) -->
+            <button class="p-2 -mr-2 hover:bg-gray-100 rounded-full transition-colors">
+                <div class="w-8 h-8 rounded-full border-[2.5px] border-gray-900 flex items-center justify-center">
+                    <i class="fa-solid fa-ellipsis text-gray-900 text-sm"></i>
+                </div>
+            </button>
         </header>
 
 
