@@ -252,7 +252,9 @@
 
                     <!-- Bottom Row: Bank Selector Buttons -->
 
-                    <div class="flex gap-2 items-center justify-center relative z-10">
+                    <div class="flex gap-2 items-center justify-center relative z-10 flex-wrap">
+
+                        <button onclick="switchBank('ALL')" class="bank-selector-item text-[10px] px-3 py-1.5 rounded-md border border-white/30 text-white hover:bg-white/20">ALL</button>
 
                         <button onclick="switchBank('ADCB')" class="bank-selector-item text-[10px] px-3 py-1.5 rounded-md border border-white/30 text-white hover:bg-white/20">ADCB</button>
 
@@ -680,13 +682,29 @@
 
     <script>
 
+        // Bank balances data
+
+        const bankBalances = {
+
+            'ADCB': 54100.00,
+
+            'RAK': 23500.50,
+
+            'MASHREQ': 15750.25,
+
+            'ADIB': 8200.75
+
+        };
+
+
+
         function switchBank(bank) {
 
             // Remove active class from all buttons
 
             document.querySelectorAll('.bank-selector-item').forEach(btn => {
 
-                btn.classList.remove('active', 'bg-white', 'text-emerald-900');
+                btn.classList.remove('active', 'bg-white', 'text-emerald-900', 'text-blue-900', 'text-red-900', 'text-purple-900', 'text-slate-900');
 
                 btn.classList.add('text-white');
 
@@ -696,17 +714,23 @@
 
             // Add active class to clicked button
 
-            event.target.classList.add('active', 'bg-white', 'text-emerald-900');
+            event.target.classList.add('active', 'bg-white');
 
             event.target.classList.remove('text-white');
 
 
 
-            // Update card color based on bank
+            // Update card color and balance based on bank
 
             const card = document.getElementById('bank-card');
 
+            const balanceDisplay = document.getElementById('balance-display');
+
+
+
             const gradients = {
+
+                'ALL': 'from-slate-700 via-slate-600 to-gray-600',
 
                 'ADCB': 'from-blue-600 via-indigo-600 to-purple-600',
 
@@ -715,6 +739,22 @@
                 'MASHREQ': 'from-purple-600 via-pink-600 to-rose-600',
 
                 'ADIB': 'from-emerald-600 via-green-600 to-teal-600'
+
+            };
+
+
+
+            const textColors = {
+
+                'ALL': 'text-slate-900',
+
+                'ADCB': 'text-blue-900',
+
+                'RAK': 'text-red-900',
+
+                'MASHREQ': 'text-purple-900',
+
+                'ADIB': 'text-emerald-900'
 
             };
 
@@ -733,6 +773,34 @@
             // Add new gradient
 
             card.classList.add(...gradients[bank].split(' '));
+
+
+
+            // Update text color for active button
+
+            event.target.classList.add(textColors[bank]);
+
+
+
+            // Calculate and display balance
+
+            let balance;
+
+            if (bank === 'ALL') {
+
+                // Sum all bank balances
+
+                balance = Object.values(bankBalances).reduce((sum, val) => sum + val, 0);
+
+            } else {
+
+                balance = bankBalances[bank];
+
+            }
+
+
+
+            balanceDisplay.textContent = `$${balance.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;
 
         }
 
